@@ -4,6 +4,7 @@ using RevitAddIn.Core.Commands;
 using ricaun.Revit.UI;
 using RevitAddIn.Module.ViewModels;
 using RevitAddIn.Module.Views;
+using RevitAddIn.Common;
 
 namespace RevitAddIn.Core
 {
@@ -16,6 +17,7 @@ namespace RevitAddIn.Core
         public override void OnStartup()
         {
             new ModuleView(new ModuleViewModel());
+            new ViewModel();
             CreateRibbon();
         }
 
