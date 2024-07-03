@@ -4,6 +4,7 @@ Test project with `AppLoader` and `Nice3Point` revit template.
 
 ### Changes
 
+- The `PublishAddinFiles` was disabled.
 - The `ImplicitUsings` was disabled.
 - The `References` was added in the `Core` project.
 - The `Application` was updated with the panel creation and `Remove` of the panel using the `ricaun.Revit.UI`.
