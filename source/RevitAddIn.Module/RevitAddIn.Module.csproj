@@ -34,6 +34,13 @@
     <RevitVersion>2025</RevitVersion>
     <TargetFramework>net8.0-windows</TargetFramework>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <Compile Remove="Views\Converters\**" />
+    <EmbeddedResource Remove="Views\Converters\**" />
+    <None Remove="Views\Converters\**" />
+    <Page Remove="Views\Converters\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Nice3point.Revit.Build.Tasks" Version="2.*" />
@@ -42,6 +49,15 @@
     <PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="$(RevitVersion).*" />
     <PackageReference Include="Nice3point.Revit.Api.RevitAPIUI" Version="$(RevitVersion).*" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Autodesk.Revit.DB" />
+    <Using Include="JetBrains.Annotations" />
+    <Using Include="Nice3point.Revit.Toolkit" />
+    <Using Include="Nice3point.Revit.Extensions" />
+    <Using Include="CommunityToolkit.Mvvm.ComponentModel" />
+    <Using Include="CommunityToolkit.Mvvm.Input" />
   </ItemGroup>
 
   <PropertyGroup>
@@ -54,7 +70,8 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <AssemblyName>$(MSBuildProjectName)$(PackageAssemblyVersion)</AssemblyName>
+    <PackageId>$(MSBuildProjectName)</PackageId>
+    <AssemblyName>$(PackageId)$(PackageAssemblyVersion)</AssemblyName>
   </PropertyGroup>
 
 </Project>

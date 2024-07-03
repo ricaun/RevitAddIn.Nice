@@ -53,6 +53,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RevitAddIn.Module\RevitAddIn.Module.csproj" />
     <ProjectReference Include="..\RevitAddIn.Common\RevitAddIn.Common.csproj" />
   </ItemGroup>
 

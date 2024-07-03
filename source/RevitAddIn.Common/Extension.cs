@@ -9,5 +9,10 @@ namespace RevitAddIn.Common
         {
             return element.Name;
         }
+
+        public static void Do()
+        {
+            new ViewModel();
+        }
     }
 }

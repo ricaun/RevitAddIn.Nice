@@ -2,6 +2,8 @@
 using Nice3point.Revit.Toolkit.External;
 using RevitAddIn.Core.Commands;
 using ricaun.Revit.UI;
+using RevitAddIn.Module.ViewModels;
+using RevitAddIn.Module.Views;
 
 namespace RevitAddIn.Core
 {
@@ -13,6 +15,7 @@ namespace RevitAddIn.Core
     {
         public override void OnStartup()
         {
+            new ModuleView(new ModuleViewModel());
             CreateRibbon();
         }
 

@@ -2,6 +2,7 @@
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.UI.Selection;
+using JetBrains.Annotations;
 using Nice3point.Revit.Toolkit.External;
 using RevitAddIn.Common;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace RevitAddIn.Core.Commands
     /// <summary>
     ///     External command entry point invoked from the Revit interface
     /// </summary>
+    [UsedImplicitly]
     [Transaction(TransactionMode.Manual)]
     public class StartupCommand : ExternalCommand
     {
